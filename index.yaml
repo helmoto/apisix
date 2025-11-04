@@ -1,0 +1,110 @@
+apiVersion: v1
+entries:
+  apisix:
+    - annotations:
+        artifacthub.io/prerelease: "false"
+      apiVersion: v2
+      appVersion: 3.14.1
+      created: "2025-10-28T07:04:56.043921252Z"
+      dependencies:
+        - condition: etcd.enabled
+          name: etcd
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.0.18
+        - alias: ingress-controller
+          condition: ingress-controller.enabled
+          name: apisix-ingress-controller
+          repository: https://apache.github.io/apisix-helm-chart
+          version: 1.0.6
+      description: A Helm chart for Apache APISIX v3
+      digest: 26ca5fe40d350e09bf9dbffb88f294ca20f17d2ede3e14c2a6002458f930c051
+      icon: https://apache.org/logos/res/apisix/apisix.png
+      maintainers:
+        - name: tao12345666333
+        - email: alinsran@apache.org
+          name: AlinsRan
+        - email: nic443@apache.org
+          name: nic-6443
+        - email: bzp2010@apache.org
+          name: bzp2010
+        - email: juzhiyuan@api7.ai
+          name: juzhiyuan
+      name: apisix
+      sources:
+        - https://github.com/apache/apisix-helm-chart
+      type: application
+      urls:
+        - https://helm.yaothink.tech/apisix/apisix/apisix-2.12.4.tgz
+      version: 2.12.4
+    - annotations:
+        artifacthub.io/prerelease: "false"
+      apiVersion: v2
+      appVersion: 3.14.1
+      created: "2025-11-04T02:01:08.200790225Z"
+      dependencies:
+        - condition: etcd.enabled
+          name: etcd
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.0.18
+        - alias: ingress-controller
+          condition: ingress-controller.enabled
+          name: apisix-ingress-controller
+          repository: https://apache.github.io/apisix-helm-chart
+          version: 1.0.5
+      description: A Helm chart for Apache APISIX v3
+      digest: 753c899b29e5f26fc855cf37f32d1a6271b0705546a6b4695fd041a54a99dccd
+      icon: https://apache.org/logos/res/apisix/apisix.png
+      maintainers:
+        - name: tao12345666333
+        - email: alinsran@apache.org
+          name: AlinsRan
+        - email: nic443@apache.org
+          name: nic-6443
+        - email: bzp2010@apache.org
+          name: bzp2010
+        - email: juzhiyuan@api7.ai
+          name: juzhiyuan
+      name: apisix
+      sources:
+        - https://github.com/apache/apisix-helm-chart
+      type: application
+      urls:
+        - https://github.com/storezhang/apisix-helm-chart/releases/download/apisix-2.12.1/apisix-2.12.1.tgz
+      version: 2.12.1
+  apisix-dashboard:
+    - apiVersion: v2
+      appVersion: 3.0.0
+      created: "2025-11-04T02:01:08.322319023Z"
+      deprecated: true
+      description: DEPRECATED A Helm chart for Apache APISIX Dashboard
+      digest: 9fd8e9359363c2fa273c9214440acaf5d73617d24b41727008833080e13b365f
+      icon: https://apache.org/logos/res/apisix/apisix.png
+      name: apisix-dashboard
+      type: application
+      urls:
+        - https://github.com/storezhang/apisix-helm-chart/releases/download/apisix-dashboard-0.8.3/apisix-dashboard-0.8.3.tgz
+      version: 0.8.3
+  apisix-ingress-controller:
+    - annotations:
+        artifacthub.io/prerelease: "true"
+      apiVersion: v2
+      appVersion: 2.0.0-rc5
+      created: "2025-11-04T02:01:08.456376527Z"
+      description: Apache APISIX Ingress Controller for Kubernetes
+      digest: dba1b61ad5406386daa4cdb89441cd00026feabe7290e2eee9979f4392aa5809
+      icon: https://apache.org/logos/res/apisix/apisix.png
+      keywords:
+        - ingress
+        - apisix
+        - nginx
+        - crd
+      maintainers:
+        - name: tao12345666333
+      name: apisix-ingress-controller
+      sources:
+        - https://github.com/apache/apisix-helm-chart
+      type: application
+      urls:
+        - https://github.com/storezhang/apisix-helm-chart/releases/download/apisix-ingress-controller-1.0.6/apisix-ingress-controller-1.0.6.tgz
+      version: 1.0.6
+generated: "2025-11-04T02:01:08.45638674Z"
