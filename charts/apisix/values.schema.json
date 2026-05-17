@@ -18,10 +18,10 @@
             "listenHTTPSPort": {
               "type": "integer"
             },
-            "enableTCPPP": {
+            "enableTCP": {
               "type": "boolean"
             },
-            "enableTCPPPToUpstream": {
+            "enableUpstream": {
               "type": "boolean"
             }
           },
