@@ -29,8 +29,8 @@
             "enabled",
             "listenHTTPPort",
             "listenHTTPSPort",
-            "enableTCPPP",
-            "enableTCPPPToUpstream"
+            "enableTCP",
+            "enableUpstream"
           ]
         }
       }
