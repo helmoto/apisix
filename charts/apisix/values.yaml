@@ -172,6 +172,7 @@ service:
   tls:
     servicePort: 443
     # nodePort: 4443
+    additionalContainerPorts: []
 
   # -- Apache APISIX service settings for stream. L4 proxy (TCP/UDP)
   stream:
@@ -278,9 +279,9 @@ apisix:
     # -- The port with proxy protocol for HTTPS
     listenHTTPSPort: 9182
     # -- Enable the proxy protocol for TCP proxy, works for stream_proxy.tcp option
-    enableTCPPP: false
+    enableTCP: false
     # -- Enable the proxy protocol to the upstream server
-    enableTCPPPToUpstream: false
+    enableUpstream: false
 
   # -- Use Pod metadata.uid as the APISIX id.
   setIDFromPodUID: false
