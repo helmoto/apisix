@@ -287,6 +287,15 @@ apisix:
     # -- Enable the proxy protocol to the upstream server
     enableUpstream: false
 
+  # -- Configuration for real IP detection
+  ip:
+    # -- The header field whose value will be used to replace the client address
+    header: "X-Real-IP"
+    # -- Defines trusted addresses that are known to send correct replacement addresses
+    from:
+      - 127.0.0.1
+      - 'unix:'
+
   # -- Use Pod metadata.uid as the APISIX id.
   setIDFromPodUID: false
 
