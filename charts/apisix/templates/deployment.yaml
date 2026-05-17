@@ -109,6 +109,14 @@ spec:
               containerPort: {{ .port }}
               protocol: TCP
             {{- end }}
+            {{- if .Values.apisix.proxyProtocol.enabled }}
+            - name: proxy-http
+              containerPort: {{ .Values.apisix.proxyProtocol.listenHTTPPort }}
+              protocol: TCP
+            - name: proxy-https
+              containerPort: {{ .Values.apisix.proxyProtocol.listenHTTPSPort }}
+              protocol: TCP
+            {{- end }}
             - name: tls
               containerPort: {{ .Values.apisix.ssl.containerPort }}
               protocol: TCP

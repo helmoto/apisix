@@ -62,6 +62,22 @@ spec:
     targetPort: {{ .port }}
     protocol: TCP
   {{- end }}
+  {{- if .Values.apisix.proxyProtocol.enabled }}
+  - name: apisix-proxy-http
+    port: {{ .Values.apisix.proxyProtocol.listenHTTPPort }}
+    targetPort: {{ .Values.apisix.proxyProtocol.listenHTTPPort }}
+  {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.proxyProtocol.http.nodePort))) }}
+    nodePort: {{ .Values.service.proxyProtocol.http.nodePort }}
+  {{- end }}
+    protocol: TCP
+  - name: apisix-proxy-https
+    port: {{ .Values.apisix.proxyProtocol.listenHTTPSPort }}
+    targetPort: {{ .Values.apisix.proxyProtocol.listenHTTPSPort }}
+  {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.proxyProtocol.https.nodePort))) }}
+    nodePort: {{ .Values.service.proxyProtocol.https.nodePort }}
+  {{- end }}
+    protocol: TCP
+  {{- end }}
   {{- if or .Values.apisix.ssl.enabled }}
   - name: apisix-gateway-tls
     port: {{ .Values.service.tls.servicePort }}
