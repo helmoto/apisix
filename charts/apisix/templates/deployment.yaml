@@ -111,10 +111,10 @@ spec:
             {{- end }}
             {{- if .Values.apisix.proxyProtocol.enabled }}
             - name: proxy-http
-              containerPort: {{ .Values.apisix.proxyProtocol.listenHTTPPort }}
+              containerPort: {{ .Values.apisix.proxyProtocol.httpPort }}
               protocol: TCP
             - name: proxy-https
-              containerPort: {{ .Values.apisix.proxyProtocol.listenHTTPSPort }}
+              containerPort: {{ .Values.apisix.proxyProtocol.httpsPort }}
               protocol: TCP
             {{- end }}
             - name: tls

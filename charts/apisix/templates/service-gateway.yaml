@@ -64,15 +64,15 @@ spec:
   {{- end }}
   {{- if .Values.apisix.proxyProtocol.enabled }}
   - name: apisix-proxy-http
-    port: {{ .Values.apisix.proxyProtocol.listenHTTPPort }}
-    targetPort: {{ .Values.apisix.proxyProtocol.listenHTTPPort }}
+    port: {{ .Values.apisix.proxyProtocol.httpPort }}
+    targetPort: {{ .Values.apisix.proxyProtocol.httpPort }}
   {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.http.proxyPort))) }}
     nodePort: {{ .Values.service.http.proxyPort }}
   {{- end }}
     protocol: TCP
   - name: apisix-proxy-https
-    port: {{ .Values.apisix.proxyProtocol.listenHTTPSPort }}
-    targetPort: {{ .Values.apisix.proxyProtocol.listenHTTPSPort }}
+    port: {{ .Values.apisix.proxyProtocol.httpsPort }}
+    targetPort: {{ .Values.apisix.proxyProtocol.httpsPort }}
   {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.tls.proxyPort))) }}
     nodePort: {{ .Values.service.tls.proxyPort }}
   {{- end }}

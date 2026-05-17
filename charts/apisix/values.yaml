@@ -279,20 +279,20 @@ apisix:
     # -- Enable or disable PROXY protocol
     enabled: false
     # -- The port with proxy protocol for HTTP
-    listenHTTPPort: 9181
+    httpPort: 9181
     # -- The port with proxy protocol for HTTPS
-    listenHTTPSPort: 9182
+    httpsPort: 9182
     # -- Enable the proxy protocol for TCP proxy, works for stream_proxy.tcp option
-    enableTCP: false
+    tcp: false
     # -- Enable the proxy protocol to the upstream server
-    enableUpstream: false
+    upstream: false
 
   # -- Configuration for real IP detection
   ip:
     # -- The header field whose value will be used to replace the client address
     header: "X-Real-IP"
     # -- Defines trusted addresses that are known to send correct replacement addresses
-    from:
+    trusts:
       - 127.0.0.1
       - 'unix:'
 

@@ -12,25 +12,25 @@
             "enabled": {
               "type": "boolean"
             },
-            "listenHTTPPort": {
+            "httpPort": {
               "type": "integer"
             },
-            "listenHTTPSPort": {
+            "httpsPort": {
               "type": "integer"
             },
-            "enableTCP": {
+            "tcp": {
               "type": "boolean"
             },
-            "enableUpstream": {
+            "upstream": {
               "type": "boolean"
             }
           },
           "required": [
             "enabled",
-            "listenHTTPPort",
-            "listenHTTPSPort",
-            "enableTCP",
-            "enableUpstream"
+            "httpPort",
+            "httpsPort",
+            "tcp",
+            "upstream"
           ]
         }
       }
