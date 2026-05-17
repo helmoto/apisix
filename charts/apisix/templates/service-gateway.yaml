@@ -66,15 +66,15 @@ spec:
   - name: apisix-proxy-http
     port: {{ .Values.apisix.proxyProtocol.listenHTTPPort }}
     targetPort: {{ .Values.apisix.proxyProtocol.listenHTTPPort }}
-  {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.proxyProtocol.http.nodePort))) }}
-    nodePort: {{ .Values.service.proxyProtocol.http.nodePort }}
+  {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.http.proxyPort))) }}
+    nodePort: {{ .Values.service.http.proxyPort }}
   {{- end }}
     protocol: TCP
   - name: apisix-proxy-https
     port: {{ .Values.apisix.proxyProtocol.listenHTTPSPort }}
     targetPort: {{ .Values.apisix.proxyProtocol.listenHTTPSPort }}
-  {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.proxyProtocol.https.nodePort))) }}
-    nodePort: {{ .Values.service.proxyProtocol.https.nodePort }}
+  {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.tls.proxyPort))) }}
+    nodePort: {{ .Values.service.tls.proxyPort }}
   {{- end }}
     protocol: TCP
   {{- end }}
