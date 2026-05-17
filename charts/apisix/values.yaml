@@ -169,14 +169,14 @@ service:
       #   port: 9082
       #   enable_http2: true
     # -- NodePort for HTTP proxy protocol port (only if service.type is NodePort and apisix.proxyProtocol.enabled is true)
-    proxyPort: 39181
+    proxyPort: 9181
   # -- Apache APISIX service settings for tls
   tls:
     servicePort: 443
     # nodePort: 4443
     additionalContainerPorts: []
     # -- NodePort for HTTPS proxy protocol port (only if service.type is NodePort and apisix.proxyProtocol.enabled is true)
-    proxyPort: 39182
+    proxyPort: 9182
 
   # -- Apache APISIX service settings for stream. L4 proxy (TCP/UDP)
   stream:
