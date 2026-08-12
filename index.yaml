@@ -459,6 +459,18 @@ entries:
   apisix-dashboard:
   - apiVersion: v2
     appVersion: 3.0.0
+    created: "2026-08-12T12:03:49.08599206Z"
+    deprecated: true
+    description: DEPRECATED A Helm chart for Apache APISIX Dashboard
+    digest: f8565e5447b562842d101f75f279f9b6add393859a5b6f254b0c25ee7645500c
+    icon: https://apache.org/logos/res/apisix/apisix.png
+    name: apisix-dashboard
+    type: application
+    urls:
+    - https://github.com/helmoto/apisix/releases/download/apisix-dashboard-0.8.4/apisix-dashboard-0.8.4.tgz
+    version: 0.8.4
+  - apiVersion: v2
+    appVersion: 3.0.0
     created: "2025-11-04T02:01:08.322319023Z"
     deprecated: true
     description: DEPRECATED A Helm chart for Apache APISIX Dashboard
@@ -470,6 +482,28 @@ entries:
     - https://github.com/storezhang/apisix-helm-chart/releases/download/apisix-dashboard-0.8.3/apisix-dashboard-0.8.3.tgz
     version: 0.8.3
   apisix-ingress-controller:
+  - annotations:
+      artifacthub.io/prerelease: "true"
+    apiVersion: v2
+    appVersion: 2.1.0
+    created: "2026-08-12T12:03:49.311843789Z"
+    description: Apache APISIX Ingress Controller for Kubernetes
+    digest: 4b350d0084043cf6c2e42f75a62c40b5ae69bf856f13dee2fb52a6ab84073698
+    icon: https://apache.org/logos/res/apisix/apisix.png
+    keywords:
+    - ingress
+    - apisix
+    - nginx
+    - crd
+    maintainers:
+    - name: tao12345666333
+    name: apisix-ingress-controller
+    sources:
+    - https://github.com/apache/apisix-helm-chart
+    type: application
+    urls:
+    - https://github.com/helmoto/apisix/releases/download/apisix-ingress-controller-1.2.3/apisix-ingress-controller-1.2.3.tgz
+    version: 1.2.3
   - annotations:
       artifacthub.io/prerelease: "true"
     apiVersion: v2
@@ -492,4 +526,4 @@ entries:
     urls:
     - https://github.com/storezhang/apisix-helm-chart/releases/download/apisix-ingress-controller-1.0.6/apisix-ingress-controller-1.0.6.tgz
     version: 1.0.6
-generated: "2026-07-01T07:17:09.763429451Z"
+generated: "2026-08-12T12:03:49.311872743Z"
