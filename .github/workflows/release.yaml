@@ -32,6 +32,16 @@ jobs:
           helm repo add bitnami https://charts.bitnami.com/bitnami
           helm repo add apisix https://apache.github.io/apisix-helm-chart
 
+      - name: Build chart dependencies
+        run: |
+          # 进入每个 chart 目录并构建依赖
+          for chart in charts/*; do
+            if [ -f "$chart/Chart.yaml" ]; then
+              echo "📦 Building dependencies for $(basename $chart)"
+              helm dependency build "$chart"
+            fi
+          done
+
       - name: Run chart-releaser
         uses: ./.github/actions/chart-releaser-action
         with:
