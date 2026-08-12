@@ -82,6 +82,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | apisix.dns.resolvers | list | `[]` | Nameservers used by APISIX to resolve upstream domain names. When empty (default), nameservers are read from `/etc/resolv.conf`, which is usually what you want inside Kubernetes |
 | apisix.dns.timeout | int | `5` | DNS resolver timeout in seconds |
 | apisix.dns.validity | int | `30` | Override the TTL in seconds of valid DNS records |
+| apisix.configDir | string | `/etc/apisix/conf.d` | Config dir |
 | apisix.enableHTTP2 | bool | `true` | Enable HTTP/2 on the HTTP listeners |
 | apisix.enableIPv6 | bool | `true` | Enable nginx IPv6 resolver |
 | apisix.enableServerTokens | bool | `true` | Whether the APISIX version number should be shown in Server header |
