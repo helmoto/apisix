@@ -301,6 +301,8 @@ metrics:
     annotations: {}
 
 apisix:
+  # -- Config dir
+  configDir: "/etc/apisix/conf.d"
   # -- Enable nginx IPv6 resolver
   enableIPv6: true
   # -- Enable HTTP/2 on the HTTP listeners
